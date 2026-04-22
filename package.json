@@ -1,0 +1,27 @@
+{
+  "name": "mounish-portfolio",
+  "version": "1.0.0",
+  "description": "Mounish Senisetty - Full-Stack AI Engineer Portfolio",
+  "type": "module",
+  "main": "portfolio.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node -e \"import('./portfolio.ts').then(m => console.log('Portfolio ready'))\"",
+    "deploy": "npm run build"
+  },
+  "keywords": [
+    "portfolio",
+    "ai",
+    "machine-learning",
+    "full-stack",
+    "typescript"
+  ],
+  "author": "Mounish Senisetty",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "vite": "^5.0.0"
+  }
+}

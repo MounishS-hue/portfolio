@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mounish Senisetty - Full-Stack AI Engineer | Building Intelligent Systems">
+  <meta name="keywords" content="AI, Machine Learning, Full-Stack, Python, FastAPI, React, Portfolio">
+  <meta name="author" content="Mounish Senisetty">
+  <meta property="og:title" content="Mounish Senisetty - Portfolio">
+  <meta property="og:description" content="AI and Data Science Engineer building intelligent full-stack products and research-backed systems">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0f172a">
+  <title>Mounish Senisetty - AI Engineer & Full-Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0f172a;
+      color: #f1f5f9;
+      font-family: "Space Grotesk", "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    #root {
+      width: 100%;
+      min-height: 100vh;
+    }
+
+    /* Loading indicator */
+    .loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      font-size: 1.2rem;
+      color: #cbd5e1;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div class="loading">Loading your portfolio...</div>
+  </div>
+  <script type="module">
+    import { mountPortfolio } from './portfolio.ts';
+    
+    // Mount portfolio when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        const root = document.getElementById('root');
+        mountPortfolio(root);
+      });
+    } else {
+      const root = document.getElementById('root');
+      mountPortfolio(root);
+    }
+  </script>
+</body>
+</html>
